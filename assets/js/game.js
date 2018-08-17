@@ -35,13 +35,14 @@ document.onkeyup = function(event) {
         this.getElementById("guessesLeft").innerHTML = guessCounter;
         this.getElementById("guessesSoFar").innerHTML = "";
         compGuess = letters[Math.floor(Math.random() * letters.length)];
+        console.log("New compGuess: " + compGuess);
     }
 
     else if (userGuess !== compGuess && guessCounter > 1) {
         guessCounter--;
         alert("Not quite, keep guessing. You have " + guessCounter + " guesses remaining.");
         this.getElementById("guessesLeft").innerHTML = guessCounter;
-        this.getElementById("guessesSoFar").append(" " + userGuess + " ");
+        this.getElementById("guessesSoFar").append("  " + userGuess + "  ");
     }
 
     else if (userGuess !== compGuess && guessCounter == 1) {
@@ -54,5 +55,6 @@ document.onkeyup = function(event) {
         this.getElementById("guessesLeft").innerHTML = guessCounter;
         this.getElementById("guessesSoFar").innerHTML = "";
         compGuess = letters[Math.floor(Math.random() * letters.length)];
+        console.log("New compGuess: " + compGuess);
     }
 }

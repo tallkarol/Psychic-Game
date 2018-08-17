@@ -5,18 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Psychic Game</title>
     <script type="text/javascript" src="assets/js/game.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <h1>Guess what letter I'm thinking of</h1><hr><br>
-    <h3>Wins: <span id="wins">0</span></h3>
-        <!-- # of times the user has guessed the letter correctly -->
-        <!-- when the player wins, increase winCounter and start the game over again (without refreshing the page) -->
-    <h3>Losses: <span id="losses">0</span></h3>
-        <!-- # of times the user fails after exhausting all guesses -->
-        <!-- when the player loses, increase the lossCounter and restart the game without a page refresh -->
-    <h3>Guesses Left: <span id="guessesLeft">5</span></h3>
-        <!-- # of guesses left, this will update -->
-    <h3>Your Guesses So Far: <p id="guessesSoFar"></p></h3>
-        <!-- the specific letters that the user typed. Display these until the user either wins or loses -->
+    <div class="jumbotron">
+        <h1 class="display-4 text-center">Guess what letter I'm thinking of</h1>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 text-center bg-success text-white py-5">
+                <h3><i class="fa fa-check"></i> Wins: <span id="wins">0</span></h3>
+                <!-- # of times the user has guessed the letter correctly -->
+                <!-- when the player wins, increase winCounter and start the game over again (without refreshing the page) -->
+            </div>
+            <div class="col-md-6 text-center bg-danger text-white py-5">
+                <h3><i class="fa fa-times"></i> Losses: <span id="losses">0</span></h3>
+                <!-- # of times the user fails after exhausting all guesses -->
+                <!-- when the player loses, increase the lossCounter and restart the game without a page refresh -->
+            </div>
+                
+        </div>
+        <div class="row py-5">
+            <div class="col-md-12 text-center py-5 bg-secondary text-white">
+                <h3>Guesses Left: <span id="guessesLeft">5</span></h3>
+                <!-- # of guesses left, this will update -->
+            </div>
+            <div class="col-md-12 text-center py-5">
+                <h3>Your Guesses So Far: <hr><p id="guessesSoFar"></p></h3>
+                <!-- the specific letters that the user typed. Display these until the user either wins or loses -->
+            </div>
+            </div>
+    </div>
 </body>
 </html>
