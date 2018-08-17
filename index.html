@@ -15,27 +15,29 @@
 </head>
 <body>
     <div class="jumbotron">
-        <h1 class="display-4 text-center">Guess what letter I'm thinking of</h1>
+        <div class="text-center">
+            <img class="img mx-auto" src="assets/img/miss-cleo.jpg"><br><br><br>
+            <h1 class="display-4 text-center">Guess what letter I'm thinking of</h1>
+        </div>
     </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6 text-center bg-success text-white py-5">
+    <div class="container my-0">
+        <div class="row my-0">
+            <div class="col-md-4 text-center bg-success text-white py-4">
                 <h3><i class="fa fa-check"></i> Wins: <span id="wins">0</span></h3>
                 <!-- # of times the user has guessed the letter correctly -->
                 <!-- when the player wins, increase winCounter and start the game over again (without refreshing the page) -->
             </div>
-            <div class="col-md-6 text-center bg-danger text-white py-5">
+            <div class="col-md-4 text-center bg-danger text-white py-4">
                 <h3><i class="fa fa-times"></i> Losses: <span id="losses">0</span></h3>
                 <!-- # of times the user fails after exhausting all guesses -->
                 <!-- when the player loses, increase the lossCounter and restart the game without a page refresh -->
             </div>
-                
-        </div>
-        <div class="row py-5">
-            <div class="col-md-12 text-center py-5 bg-secondary text-white">
-                <h3>Guesses Left: <span id="guessesLeft">5</span></h3>
-                <!-- # of guesses left, this will update -->
+            <div class="col-md-4 text-center bg-secondary text-white py-4">
+                    <h3>Guesses Left: <span id="guessesLeft">5</span></h3>
+                    <!-- # of guesses left, this will update -->
             </div>
+        </div>
+        <div class="row">
             <div class="col-md-12 text-center py-5">
                 <h3>Your Guesses So Far: <hr><p id="guessesSoFar"></p></h3>
                 <!-- the specific letters that the user typed. Display these until the user either wins or loses -->
