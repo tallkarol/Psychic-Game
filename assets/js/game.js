@@ -3,46 +3,35 @@
 // =========================================
 
 // set-up computer choices
-var compGuess = ["a","b","c","e","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
+var letters = ["a","b","c","e","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
 
 // Start the game with 0 wins, 0 losses, 5 lives, 3 turns per life,
 var winCounter = 0;
 var lossCounter = 0;
-var lifeCounter = 5;
-var turnCounter = 3;
 
 
-// FUNCTIONS
-// ===========================================
+// Start the Game
 
+// Computer makes an initial random letter choice on page load
 
-// Function to render guess
-function renderGuess() {
+var compGuess = letters[Math.floor(Math.random() * letters.length)];
 
-}
+console.log("initial compGuess: " + compGuess)
 
-//
-    if (userGuess === compGuess) {
-        winCounter++;
-        document.querySelector("#wins").innerHTML = winCounter;
-    }
-
-    else (userGuess !== compGuess) {
-        turnCounter--;
-        // if turnCounter < 1; lossCounter++; if lossCounter = 5; run function gameOver
-    }
-}
-
-// MAIN PROCESS
-// =========================================
-
-// Calling functions to start the game
-
-renderGuess();
-
-// When the user presses a key, it will run the following function...
+// User makes an initial guess
 document.onkeyup = function(event) {
+    // Captures the key press, converts it to lowercase, and saves it to a variable
+    var userGuess = event.key.toLowerCase();
 
-    // Determine which key was pressed, make it lowercase and set it to userGuess
-    var userGuess = event.key.toLowerCase
+    console.log(userGuess);
+    if (userGuess === compGuess) {
+        alert("Congratulations, you have won!");
+        // Increase the win counter
+        // winCounter++;
+        console.log("updated wins" + winCounter);
+        this.getElementById("#wins").innerText(winCounter);
+        // Generate new compGuess
+        var compGuess = letters[Math.floor(Math.random() * letters.length)];
+        console.log("second compGuess: " + compGuess)
+    }
 }
