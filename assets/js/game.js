@@ -33,7 +33,8 @@ document.onkeyup = function(event) {
         // Generate new compGuess;
         guessCounter = 5;
         this.getElementById("guessesLeft").innerHTML = guessCounter;
-        this.getElementById("guessesSoFar").innerHTML = ""
+        this.getElementById("guessesSoFar").innerHTML = "";
+        compGuess = letters[Math.floor(Math.random() * letters.length)];
     }
 
     else if (userGuess !== compGuess && guessCounter > 1) {
@@ -52,6 +53,6 @@ document.onkeyup = function(event) {
         guessCounter = 5;
         this.getElementById("guessesLeft").innerHTML = guessCounter;
         this.getElementById("guessesSoFar").innerHTML = "";
-
+        compGuess = letters[Math.floor(Math.random() * letters.length)];
     }
 }
