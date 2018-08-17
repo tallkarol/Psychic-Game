@@ -1,6 +1,5 @@
 /* This js is written with an emphasis on functions */
 
-
 // VARIABLES
 // =========================================
 
@@ -13,8 +12,10 @@ var lossCounter = 0;
 var guessCounter = 5;
 
 
-// Functions
+// FUNCTIONS
+// ==========================================
 
+// Guess correct, you win
 function increaseWinCounter() {
     winCounter++;
     document.getElementById("wins").innerHTML = winCounter;
@@ -45,7 +46,10 @@ function newCompGuess() {
     console.log("New compGuess: " + compGuess);
 }
 
-// Start the Game
+
+// START THE GAME
+// =========================================
+
 
 // Computer makes an initial random letter choice on page load
 
